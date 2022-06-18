@@ -1,15 +1,15 @@
 module Xirr
   include ActiveSupport::Configurable
  
-  config_accessor :eps { '1.0e-6'.to_f }
-  config_accessor :period { 365.25 }
-  config_accessor :iteration_limit { 50 }
-  config_accessor :precision      { 6 }
-  config_accessor :default_method { :newton_method }
-  config_accessor :fallback       { true }
-  config_accessor :replace_for_nil { 0.0 }
-  config_accessor :compact        { true }
-  config_accessor :raise_exception { false }
+  config_accessor :eps do '1.0e-6'.to_f end
+  config_accessor :period do 365.25 end
+  config_accessor :iteration_limit do  50 end
+  config_accessor :precision      do 6 end
+  config_accessor :default_method do :newton_method end
+  config_accessor :fallback       do true end
+  config_accessor :replace_for_nil do 0.0 end
+  config_accessor :compact        do true end
+  config_accessor :raise_exception do false end
   
 
   # Sets as constants all the entries in the Hash Default values
