@@ -18,7 +18,7 @@ module Xirr
 
   # Iterates though default values and sets in config
   default_values.each do |key, value|
-    self.config.send("#{key.to_sym}=", value)
+    self.config.send("#{key.to_sym}=", ( self.config.send("#{key.to_sym}") || value))
     const_set key.to_s.upcase.to_sym, self.config.send("#{key.to_sym}")
   end
 end
