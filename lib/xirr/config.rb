@@ -1,5 +1,7 @@
 module Xirr
   include ActiveSupport::Configurable
+  config_accessor :eps, :period, :iteration_limit, :precision, :default_method, :fallback, :replace_for_nil, :compact,
+                  :raise_exception
 
   # Sets as constants all the entries in the Hash Default values
   default_values = {
